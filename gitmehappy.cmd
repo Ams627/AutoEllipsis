@@ -1,0 +1,19 @@
+rem echo off
+git init
+git add AutoEllipsis/App.xaml
+git add AutoEllipsis/App.xaml.cs
+git add AutoEllipsis/ViewModel.cs
+git add AutoEllipsis/Converters/ConverterBase.cs
+git add AutoEllipsis/Converters/MyValueConverter.cs
+git add AutoEllipsis/App.config
+git add AutoEllipsis/MainWindow.xaml
+git add AutoEllipsis/MainWindow.xaml.cs
+git add AutoEllipsis/Properties/AssemblyInfo.cs
+git add AutoEllipsis/app.config
+git add AutoEllipsis/Properties/Settings.settings
+git add AutoEllipsis/Properties/Resources.Designer.cs
+git add AutoEllipsis/Properties/Resources.resx
+git add AutoEllipsis/Properties/Settings.Designer.cs
+git add AutoEllipsis/AutoEllipsis.csproj
+git add AutoEllipsis.sln
+git add .gitignore

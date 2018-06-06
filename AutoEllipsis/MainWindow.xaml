@@ -1,0 +1,25 @@
+﻿<Window x:Class="AutoEllipsis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoEllipsis"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+<Window.DataContext>
+    <local:ViewModel/>
+</Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Style.Triggers>
+                <Trigger Property="local:TextBlockService.IsTextTrimmed" Value="True">
+                    <Setter Property="ToolTip" Value="{Binding Text,RelativeSource={RelativeSource Self}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Text="The fat brown dog jumped over the lazy cat" FontSize="20" Width="800" TextTrimming="CharacterEllipsis" Margin="50,10,10,10"/>
+    </StackPanel>
+</Window>
